@@ -29,7 +29,7 @@ SECRET_KEY = os.environ.get("SECRET_KEY")
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['https://metal-re-injection.herokuapp.com/', 'localhost']
+ALLOWED_HOSTS = ['metal-re-injection.herokuapp.com', 'localhost']
 
 
 # Application definition
