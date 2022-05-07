@@ -6,20 +6,34 @@
     <div class="container px-4 px-lg-5 d-flex h-100 align-items-center justify-content-center">
         <div class="d-flex justify-content-center">
             <div class="text-center">
-                <h1 class="mx-auto my-0 text-uppercase">Metal Re-Injection</h1>
-                <h2 class="text-white-50 mx-auto mt-2 mb-5">
-                    {% for post in post_list %}
+                <h1 class="mx-auto my-0 text-uppercase">Latest Reviews</h1>
 
-                    {{ post.author }}<br>
-                    {{ post.title }}<br>
-                    {{ post.featured_image }}<br>
-                    {{ post.created_on }}
-                </h2>
-                <a class="btn btn-primary" href="#login">Login</a>
+                <div class="row mt-5">
+                    {% for post in post_list %}
+                    <div class="col-md-4">
+                        <div class="card mb-4 box-shadow"
+                            style="background-color: black; color: whitesmoke; box-shadow: 5px;">
+                            <div class="card-body">
+                                <h4 style="font-size:18px;font-weight:bold;min-height:42px;">
+                                    {{ post.title }}<br>
+                                    {{ post.track }}<br>
+                                    {{ post.excerpt }}<br>
+                                    {{ post.content|safe }}
+                                    </h4>
+                                <div class="d-flex justify-content-center align-items-center">
+                                    <small class="text-muted">{{ post.author }}<br>{{ post.created_on }}</small>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                        </a>
+                    </div>
+                    {% endfor %}
+                    <a class="btn btn-primary" href="#login">Login to review a track</a>
+                </div>
             </div>
         </div>
     </div>
 </div>
 
-{% endfor %}
 {% endblock %}
