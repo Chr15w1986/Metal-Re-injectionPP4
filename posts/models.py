@@ -9,7 +9,7 @@ class Post(models.Model):
     title = models.CharField(max_length=200, unique=True)
     slug = models.SlugField(max_length=200, unique=True)
     author = models.ForeignKey(
-        User, on_delete=models.CASCADE, related_name="track"
+        User, on_delete=models.CASCADE
     )
     featured_image = CloudinaryField('image', default='placeholder')
     excerpt = models.TextField(blank=True)
@@ -19,6 +19,7 @@ class Post(models.Model):
     status = models.IntegerField(choices=STATUS, default=0)
     likes = models.ManyToManyField(
         User, related_name='track_like', blank=True)
+    # song = models.ForeignKey(Song, on_delete=models.CASCADE, related_name="cover")
 
     class Meta:
         ordering = ["-created_on"]
@@ -44,3 +45,6 @@ class Comment(models.Model):
 
     def __str__(self):
         return f"Comment {self.body} by {self.name}"
+
+
+
