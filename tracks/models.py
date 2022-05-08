@@ -11,3 +11,7 @@ class Song(models.Model):
 
     def __str__(self):
         return str(self.title)
+    
+    # def save(self, *args, **kwargs):
+    #     self.author = request.user
+    #     super(Song, self).save(*args, **kwargs)
