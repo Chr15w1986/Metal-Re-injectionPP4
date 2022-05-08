@@ -19,16 +19,37 @@
                                     {{ post.track }}<br>
                                     {{ post.excerpt }}<br>
                                     {{ post.content|safe }}
-                                    </h4>
+                                </h4>
                                 <div class="d-flex justify-content-center align-items-center">
                                     <small class="text-muted">{{ post.author }}<br>{{ post.created_on }}</small>
-                                    
+
                                 </div>
                             </div>
                         </div>
                         </a>
                     </div>
                     {% endfor %}
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="pagination">
+                                <span class="step-links">
+                                    {% if page_obj.has_previous %}
+                                    <a href="?page=1">&laquo; first</a>
+                                    <a href="?page={{ page_obj.previous_page_number }}">previous</a>
+                                    {% endif %}
+
+                                    <span class="current">
+                                        <p>Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}.</p>
+                                    </span>
+
+                                    {% if page_obj.has_next %}
+                                    <a href="?page={{ page_obj.next_page_number }}">next</a>
+                                    <a href="?page={{ page_obj.paginator.num_pages }}">last &raquo;</a>
+                                    {% endif %}
+                                </span>
+                            </div>
+                        </div>
+                    </div>
                     <a class="btn btn-primary" href="#login">Login to review a track</a>
                 </div>
             </div>
