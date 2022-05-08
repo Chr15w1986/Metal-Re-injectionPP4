@@ -1,0 +1,60 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="masthead">
+    <div class="container px-4 px-lg-5 d-flex h-100 align-items-center justify-content-center">
+        <div class="d-flex justify-content-center">
+            <div class="text-center">
+                <h1 class="mx-auto my-0 text-uppercase">Latest Reviews</h1>
+
+                <div class="row mt-5">
+                    {% for post in post_list %}
+                    <div class="col-md-4">
+                        <div class="card mb-4 box-shadow"
+                            style="background-color: black; color: whitesmoke; box-shadow: 5px;">
+                            <div class="card-body">
+                                <h4 style="font-size:18px;font-weight:bold;min-height:42px;">
+                                    {{ post.title }}<br>
+                                    {{ post.track }}<br>
+                                    {{ post.excerpt }}<br>
+                                    {{ post.content|safe }}
+                                </h4>
+                                <div class="d-flex justify-content-center align-items-center">
+                                    <small class="text-muted">{{ post.author }}<br>{{ post.created_on }}</small>
+
+                                </div>
+                            </div>
+                        </div>
+                        </a>
+                    </div>
+                    {% endfor %}
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="pagination">
+                                <span class="step-links">
+                                    {% if page_obj.has_previous %}
+                                    <a href="?page=1">&laquo; first</a>
+                                    <a href="?page={{ page_obj.previous_page_number }}">previous</a>
+                                    {% endif %}
+
+                                    <span class="current">
+                                        <p>Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}.</p>
+                                    </span>
+
+                                    {% if page_obj.has_next %}
+                                    <a href="?page={{ page_obj.next_page_number }}">next</a>
+                                    <a href="?page={{ page_obj.paginator.num_pages }}">last &raquo;</a>
+                                    {% endif %}
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <a class="btn btn-primary" href="#login">Login to review a track</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
