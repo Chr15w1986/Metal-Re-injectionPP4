@@ -1,4 +1,4 @@
-from django.shortcuts import render
+"""Post Views"""
 from django.views import generic
 from .models import Post
 
