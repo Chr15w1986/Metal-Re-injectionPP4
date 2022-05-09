@@ -1,22 +1,57 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<div>
-    <h2>Song list</h2>
-    <div>
-        {% for song in songs %}
-        <a href="">
-            <div class="card" style="width: 18rem;">
-                <img src="..." class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">{{ song.title }}</h5>
-                    <p class="card-text">Artist: {{ song.artist }}</p>
-                    <p class="card-text">Original Artist: {{ song.original_artist }}</p>
+
+<div class="masthead">
+    <div class="container px-4 px-lg-5 d-flex h-100 align-items-center justify-content-center">
+        <div class="d-flex justify-content-center">
+            <div class="text-center">
+                <h1 class="mx-auto my-0 text-uppercase">Track list</h1>
+
+
+                <div class="row mt-5">
+                    {% for song in songs %}
+                    <a href="">
+                        <div class="col-md-5">
+                            <div class="card mb-4 box-shadow"
+                                style="background-color: black; color: whitesmoke; box-shadow: 5px;">
+                                <div class="card-body">
+                                    <h5 class="card-title">Track: {{ song.title }}</h5>
+                                    <p class="card-text">Artist: {{ song.artist }}</p>
+                                    <p class="card-text">Original Artist: {{ song.original_artist }}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                {% endfor %}
+
+                <div class="row">
+                    <div class="col-12">
+                        <div class="pagination">
+                            <span class="step-links">
+                                {% if page_obj.has_previous %}
+                                <a href="?page=1">&laquo; first</a>
+                                <a href="?page={{ page_obj.previous_page_number }}">previous</a>
+                                {% endif %}
+
+                                <span class="current">
+                                    <p>Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}.</p>
+                                </span>
+
+                                {% if page_obj.has_next %}
+                                <a href="?page={{ page_obj.next_page_number }}">next</a>
+                                <a href="?page={{ page_obj.paginator.num_pages }}">last &raquo;</a>
+                                {% endif %}
+                            </span>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </a>
-        {% endfor %}
+        </div>
     </div>
 </div>
+
 
 {% endblock %}
