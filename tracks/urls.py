@@ -1,7 +1,8 @@
 from django.urls import path
 from . import views
 
-app_name = 'tracks'
+APP_NAME = 'tracks'
 urlpatterns = [
     path('addsong/', views.AddSong.as_view(), name='add-song'),
+    path('song-list/', views.SongList.as_view(), name='song-list'),
 ]
