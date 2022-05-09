@@ -1,15 +1,23 @@
-{% extends 'base.html' %}
+{% extends "base.html" %}
 
 {% load crispy_forms_tags %}
 
 {% block content %}
-<div>
-    <h2>add song</h2>
-    <form action="." method="POST">
-            {% csrf_token %}
-            {{ form|crispy }}
-            <input type="submit" value="Submit">
-    </form>
+<div class="masthead">
+    <div class="container px-4 px-lg-5 d-flex h-100 align-items-center justify-content-center">
+        <div class="d-flex justify-content-center">
+            <div class="text-center">
+                <h1 class="mx-auto my-0 text-uppercase">Add a Track</h1>
+                <div>
+                    <form action="." method="POST">
+                        {% csrf_token %}
+                        {{ form|crispy }}
+                        <input type="submit" value="Submit">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 
 {% endblock %}
