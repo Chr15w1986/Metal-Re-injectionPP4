@@ -1,57 +1,58 @@
-{% extends 'base.html' %}
+{% extends "base.html" %}
 
 {% block content %}
 
+{% load static %}
+
 <div class="masthead">
-    <div class="container px-4 px-lg-5 d-flex h-100 align-items-center justify-content-center">
+    <div class="container-fluid px-4 px-lg-5 d-flex h-100 align-items-center justify-content-center">
         <div class="d-flex justify-content-center">
             <div class="text-center">
                 <h1 class="mx-auto my-0 text-uppercase">Track list</h1>
 
-
                 <div class="row mt-5">
                     {% for song in songs %}
-                    <a href="">
-                        <div class="col-md-5">
-                            <div class="card mb-4 box-shadow"
-                                style="background-color: black; color: whitesmoke; box-shadow: 5px;">
-                                <div class="card-body">
-                                    <h5 class="card-title">Track: {{ song.title }}</h5>
+                    <div class="col-md-4">
+                        <div class="card mb-4 box-shadow"
+                            style="background-color: black; color: whitesmoke; box-shadow: 5px;">
+                            <div class="card-body">
+                                <h4 style="font-size:18px;font-weight:bold;min-height:42px;">
+                                    Track: {{ song.title }}
                                     <p class="card-text">Artist: {{ song.artist }}</p>
-                                    <p class="card-text">Original Artist: {{ song.original_artist }}</p>
-                                </div>
+                                    <p class="card-text">Original Artist: <br>{{ song.original_artist }}
+                                    </p>
+                                </h4>
                             </div>
                         </div>
-                    </a>
-                </div>
+                    </div>
+                    
+                    {% endfor %}
 
-                {% endfor %}
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="pagination">
+                                <span class="step-links">
+                                    {% if page_obj.has_previous %}
+                                    <a href="?page=1">&laquo; first</a>
+                                    <a href="?page={{ page_obj.previous_page_number }}">previous</a>
+                                    {% endif %}
 
-                <div class="row">
-                    <div class="col-12">
-                        <div class="pagination">
-                            <span class="step-links">
-                                {% if page_obj.has_previous %}
-                                <a href="?page=1">&laquo; first</a>
-                                <a href="?page={{ page_obj.previous_page_number }}">previous</a>
-                                {% endif %}
+                                    <span class="current">
+                                        <p>Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}.</p>
+                                    </span>
 
-                                <span class="current">
-                                    <p>Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}.</p>
+                                    {% if page_obj.has_next %}
+                                    <a href="?page={{ page_obj.next_page_number }}">next</a>
+                                    <a href="?page={{ page_obj.paginator.num_pages }}">last &raquo;</a>
+                                    {% endif %}
                                 </span>
-
-                                {% if page_obj.has_next %}
-                                <a href="?page={{ page_obj.next_page_number }}">next</a>
-                                <a href="?page={{ page_obj.paginator.num_pages }}">last &raquo;</a>
-                                {% endif %}
-                            </span>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
 
 
-{% endblock %}
+    {% endblock %}
