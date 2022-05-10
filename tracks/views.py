@@ -21,3 +21,4 @@ class SongList(ListView):
     template_name = 'tracks/song-list.html'
     context_object_name = 'songs'
     queryset = Song.objects.all().order_by('title')
+    paginate_by = 3
