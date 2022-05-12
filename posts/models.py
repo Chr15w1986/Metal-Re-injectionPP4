@@ -1,6 +1,7 @@
 from django.db import models
 from django.contrib.auth.models import User
 from cloudinary.models import CloudinaryField
+from tracks.models import Song
 
 STATUS = ((0, "Draft"), (1, "Published"))
 
@@ -19,7 +20,9 @@ class Post(models.Model):
     status = models.IntegerField(choices=STATUS, default=0)
     likes = models.ManyToManyField(
         User, related_name='track_like', blank=True)
-    # song = models.ForeignKey(Song, on_delete=models.CASCADE, related_name="cover")
+    song = models.ForeignKey(
+        Song, on_delete=models.CASCADE, related_name="cover"
+        )
 
     class Meta:
         ordering = ["-created_on"]
@@ -45,6 +48,3 @@ class Comment(models.Model):
 
     def __str__(self):
         return f"Comment {self.body} by {self.name}"
-
-
-
