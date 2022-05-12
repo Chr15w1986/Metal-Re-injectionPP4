@@ -1,6 +1,6 @@
 from django.shortcuts import render, reverse
 from django.urls import reverse_lazy
-from django.views.generic import CreateView, ListView
+from django.views.generic import CreateView, ListView, DetailView
 from django.contrib.auth.mixins import LoginRequiredMixin
 from .forms import SongForm
 from .models import Song
@@ -22,3 +22,9 @@ class SongList(ListView):
     context_object_name = 'songs'
     queryset = Song.objects.all().order_by('title')
     paginate_by = 3
+
+
+class SingleSongDetail(DetailView):
+    model = Song
+    template_name = 'tracks/single-song.html'
+    context_object_name = 'song'
