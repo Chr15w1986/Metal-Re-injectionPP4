@@ -10,7 +10,8 @@ urlpatterns = [
     path('', include('home.urls')),
     path('tracks/', include('tracks.urls')),
     path('posts/', include('posts.urls')),
+    path('accounts/', include('allauth.urls')),
 ]
 
-handler404 = "metal_reinjection.views.page_not_found_view"
-handler500 = "metal_reinjection.views.custom_500_error_view"
+HANDLER404 = "metal_reinjection.views.page_not_found_view"
+HANDLER500 = "metal_reinjection.views.custom_500_error_view"
