@@ -12,12 +12,26 @@
             <div class="text-center">
                 <h1 class="mx-auto my-0 text-uppercase">Add a Track</h1>
                 <div>
+                    {% if request.user.is_authenticated %}
                     <form action="." method="POST">
                         {% csrf_token %}
                         {{ form|crispy }}
                         <input class="btn btn-primary" type="submit" value="Submit">
                     </form>
                 </div>
+                {% else %}
+                <div class="mt-5">
+                    <a href="#"><button class="btn btn-primary">Login</button></a>
+                    <a href="#"><button class="btn btn-primary">Sign Up</button></a>
+                </div>
+                {% endif %}
+
+                {% for x in all %}
+                <h3 class="text-center mt-2 mb-2">{{x.caption}}</h3>
+                <video class="embed-responsive embed-responsive-16by9" controls="controls">
+                    <source src="{{x.video.url}}" type="video/mp4" />
+                </video>
+                {% endfor %}
             </div>
         </div>
     </div>
