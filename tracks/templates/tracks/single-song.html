@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+{% load static %}
+
+<div class="masthead">
+    <div class="container-fluid px-4 px-lg-5 d-flex h-100 align-items-center justify-content-center">
+        <div class="d-flex justify-content-center">
+            <div class="text-center">
+                <h1 class="mx-auto my-0 text-uppercase">Rate a Track</h1>
+
+                {% if request.user.is_authenticated %}
+                <div class="row mt-5">
+                    <div class="col-md-4">
+                        <a href="{% url 'single-song' song.id %}">
+                            <div class="card mb-4 box-shadow"
+                                style="background-color: black; color: whitesmoke; box-shadow: 5px;">
+                                <div class="card-body">
+                                    <h4 style="font-size:18px;font-weight:bold;min-height:42px;">
+                                        Track: {{ song.title }}
+                                        <p class="card-text">Artist: {{ song.artist }}</p>
+                                        <p class="card-text">Original Artist: <br>{{ song.original_artist }}
+                                        </p>
+                                    </h4>
+                                </div>
+                            </div>
+                        </a>
+                        {% else %}
+                        <div class="mt-5">
+                            <a href="#"><button class="btn btn-primary">Login</button></a>
+                            <a href="#"><button class="btn btn-primary">Sign Up</button></a>
+                        </div>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}
