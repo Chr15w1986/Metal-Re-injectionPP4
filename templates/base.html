@@ -41,11 +41,19 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="{% url 'song-list' %}">Latest Covers</a></li>
+                    {% if request.user.is_authenticated %}
+                    <li class="nav-item"><a class="nav-link" href="{% url 'song-list' %}">Track List</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{% url 'addsong' %}">Add a Track</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Rate a Track</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Logout</a></li>
+
+                    {% else %}
+                    <li class="nav-item"><a class="nav-link" href="{% url 'song-list' %}">Track List</a></li>
                     <li class="nav-item"><a class="nav-link" href="#">Sign Up</a></li>
                     <li class="nav-item"><a class="nav-link" href="#">Login</a></li>
                 </ul>
             </div>
+            {% endif %}
         </div>
     </nav>
 
