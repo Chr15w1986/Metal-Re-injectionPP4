@@ -11,6 +11,10 @@ class Song(models.Model):
                 User, on_delete=models.CASCADE, null=False, blank=False,
                 related_name='author')
     url = models.URLField(null=False, blank=False)
+    added_on = models.DateTimeField(auto_now=True)
+
+    class Meta:
+        ordering = ['added_on']
 
     def __str__(self):
         return str(self.title)
