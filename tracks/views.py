@@ -1,9 +1,17 @@
-from django.shortcuts import render, reverse
 from django.urls import reverse_lazy
-from django.views.generic import CreateView, ListView, DetailView
+from django.views.generic import ListView, DetailView
+from django.views.generic.edit import CreateView, DeleteView
 from django.contrib.auth.mixins import LoginRequiredMixin
 from .forms import SongForm
 from .models import Song
+
+
+class SongList(ListView):
+    model = Song
+    template_name = 'tracks/song-list.html'
+    context_object_name = 'songs'
+    queryset = Song.objects.all().order_by('-added_on')
+    paginate_by = 3
 
 
 class AddSong(CreateView, LoginRequiredMixin):
@@ -16,15 +24,13 @@ class AddSong(CreateView, LoginRequiredMixin):
         return super().form_valid(form)
 
 
-class SongList(ListView):
-    model = Song
-    template_name = 'tracks/song-list.html'
-    context_object_name = 'songs'
-    queryset = Song.objects.all().order_by('title')
-    paginate_by = 3
-
-
 class SingleSongDetail(DetailView):
     model = Song
     template_name = 'tracks/single-song.html'
-    context_object_name = 'song'
+    context = {'song': Song}
+
+
+class DeleteSong(DeleteView):
+    model = Song
+    template_name = 'tracks/delete-song.html'
+    success_url = reverse_lazy('delete-song')
