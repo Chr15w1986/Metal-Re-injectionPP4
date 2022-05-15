@@ -7,4 +7,6 @@ urlpatterns = [
     path('song-list/', views.SongList.as_view(), name='song-list'),
     path('single-song/<int:pk>/', views.SingleSongDetail.as_view(),
          name='single-song'),
+    path('single-song/<int:pk>/delete-song', views.DeleteSong.as_view(),
+         name='delete-song'),
 ]
