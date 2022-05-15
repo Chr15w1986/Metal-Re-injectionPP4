@@ -3,4 +3,3 @@ from .models import Song
 
 
 admin.site.register(Song)
-
