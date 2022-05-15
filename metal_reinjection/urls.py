@@ -10,7 +10,6 @@ urlpatterns = [
     path('', include('home.urls')),
     path('tracks/', include('tracks.urls')),
     path('posts/', include('posts.urls')),
-    path('accounts/', include('allauth.urls')),
 ]
 
 HANDLER404 = "metal_reinjection.views.page_not_found_view"
