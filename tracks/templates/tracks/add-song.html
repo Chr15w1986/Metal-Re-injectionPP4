@@ -16,6 +16,8 @@
                     <form action="." method="POST">
                         {% csrf_token %}
                         {{ form|crispy }}
+                        <p>**Be sure to add embed/ to the url, if you dont, the sample track will not work!<br>
+                        Example: https://open.spotify.com/embed/track/5z6xH</p>
                         <input class="btn btn-primary" type="submit" value="Submit">
                     </form>
                 </div>
