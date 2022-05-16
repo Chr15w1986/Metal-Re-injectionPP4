@@ -13,7 +13,7 @@
                 <h1 class="mx-auto my-0 text-uppercase">Add a Track</h1>
                 <div>
                     {% if request.user.is_authenticated %}
-                    <form action="." method="POST">
+                    <form action="." novalidate method="POST">
                         {% csrf_token %}
                         {{ form|crispy }}
                         <p>**Be sure to add embed/ to the url, if you dont, the sample track will not work!<br>
