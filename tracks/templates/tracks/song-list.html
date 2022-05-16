@@ -14,26 +14,31 @@
                     {% for song in songs %}
                     <div class="col-md-4">
                         {% if request.user.is_authenticated %}
-                        {% if request.user == song.author %}
-                        YOU ADDED THIS SONG
-                        {% endif %}
-                        <a href="{% url 'single-song' song.id %}">
-                            <div class="card mb-4 box-shadow"
-                                style="background-color: black; color: whitesmoke; box-shadow: 5px;">
+                        <div class="card mb-4 box-shadow"
+                            style="background-color: black; color: whitesmoke; box-shadow: 5px;">
+                            <a href="{% url 'single-song' song.id %}">
                                 <div class="card-body">
                                     <h4 style="font-size:18px;font-weight:bold;min-height:42px;">
                                         Track: {{ song.title }}
                                         <hr>
                                         <p class="card-text">Artist: {{ song.artist }}</p>
-                                        <p class="card-text">Original Artist: <br>{{ song.original_artist }}
+                                        <p class="card-text">Original Artist: <br>{{ song.original_artist }}</p>
                                             <hr>
                                             <p class="card-text">Submitted by: <br>{{ song.author }}
                                                 <p class="card-text">{{ song.added_on }}
                                                 </p>
+                                            </p>
+                                            {% if request.user == song.author %}
+                                            You added this track
+                                            <div><br>
+                                                <button type="button" class="btn-primary btn-sm">Edit</button>
+                                                <button type="button" class="btn-danger btn-sm">Delete</button>
+                                            </div>
+                                            {% endif %}
                                     </h4>
                                 </div>
-                            </div>
-                        </a>
+                            </a>
+                        </div>
                         {% else %}
                         <div class="card mb-4 box-shadow"
                             style="background-color: black; color: whitesmoke; box-shadow: 5px;">
@@ -42,7 +47,7 @@
                                     Track: {{ song.title }}
                                     <hr>
                                     <p class="card-text">Artist: {{ song.artist }}</p>
-                                    <p class="card-text">Original Artist: <br>{{ song.original_artist }}                                                  
+                                    <p class="card-text">Original Artist: <br>{{ song.original_artist }}
                                 </h4>
                             </div>
                         </div>
@@ -55,17 +60,16 @@
                         <div class="col-12">
                             <div class="pagination">
                                 <span class="step-links">
-                                    {% if page_obj.has_previous %}
-                                    <a href="?page=1">&laquo; first</a>
-                                    <a href="?page={{ page_obj.previous_page_number }}">previous</a>
-                                    {% endif %}
-
                                     <span class="current">
                                         <p>Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}</p>
                                     </span>
+                                    {% if page_obj.has_previous %}
+                                    <a href="?page=1">&laquo; first</a> |
+                                    <a href="?page={{ page_obj.previous_page_number }}">previous</a> |
+                                    {% endif %}
 
                                     {% if page_obj.has_next %}
-                                    <a href="?page={{ page_obj.next_page_number }}">next</a>
+                                    <a href="?page={{ page_obj.next_page_number }}">next</a> |
                                     <a href="?page={{ page_obj.paginator.num_pages }}">last &raquo;</a>
                                     {% endif %}
                                 </span>
@@ -76,6 +80,6 @@
             </div>
         </div>
     </div>
+</div>
 
-
-    {% endblock %}
+{% endblock %}
