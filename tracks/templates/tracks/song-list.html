@@ -14,6 +14,9 @@
                     {% for song in songs %}
                     <div class="col-md-4">
                         {% if request.user.is_authenticated %}
+                        {% if request.user == song.author %}
+                        YOU ADDED THIS SONG
+                        {% endif %}
                         <a href="{% url 'single-song' song.id %}">
                             <div class="card mb-4 box-shadow"
                                 style="background-color: black; color: whitesmoke; box-shadow: 5px;">
@@ -58,7 +61,7 @@
                                     {% endif %}
 
                                     <span class="current">
-                                        <p>Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}.</p>
+                                        <p>Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}</p>
                                     </span>
 
                                     {% if page_obj.has_next %}
