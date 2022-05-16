@@ -25,7 +25,8 @@
                                         <p class="card-text">Original Artist: <br>{{ song.original_artist }}
                                             <hr>
                                             <p class="card-text">Submitted by: <br>{{ song.author }}
-                                            </p>
+                                                <p class="card-text">{{ song.added_on }}
+                                                </p>
                                     </h4>
                                 </div>
                             </div>
@@ -38,11 +39,7 @@
                                     Track: {{ song.title }}
                                     <hr>
                                     <p class="card-text">Artist: {{ song.artist }}</p>
-                                    <p class="card-text">Original Artist: <br>{{ song.original_artist }}
-                                        <hr>
-                                        <p class="card-text">Submitted by: <br>{{ song.author }}
-                                            <p class="card-text">Date Added: <br>{{ song.added_on }}
-                                        </p>
+                                    <p class="card-text">Original Artist: <br>{{ song.original_artist }}                                                  
                                 </h4>
                             </div>
                         </div>
