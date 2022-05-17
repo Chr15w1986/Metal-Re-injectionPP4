@@ -45,3 +45,10 @@ class DeleteSong(DeleteView):
     model = Song
     template_name = 'tracks/delete-song.html'
     success_url = reverse_lazy('song-list')
+
+
+class UpdateSong(UpdateView):
+    model = Song
+    form_class = SongForm
+    template_name = 'tracks/update-song.html'
+    success_url = reverse_lazy('song-list')
