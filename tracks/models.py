@@ -2,6 +2,8 @@
 from django.db import models
 from django.contrib.auth.models import User
 
+STATUS = ((0, "Draft"), (1, "Published"))
+
 
 class Song(models.Model):
     title = models.CharField(max_length=200, null=False, blank=False)
@@ -12,6 +14,7 @@ class Song(models.Model):
                 related_name='author')
     url = models.URLField(null=False, blank=False)
     added_on = models.DateTimeField(auto_now=True)
+    status = models.IntegerField(choices=STATUS, default=0)
 
     class Meta:
         ordering = ['added_on']
