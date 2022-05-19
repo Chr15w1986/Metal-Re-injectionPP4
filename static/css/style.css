@@ -188,6 +188,10 @@ a:hover {
   color: #829272;
 }
 
+.card-body a {
+  color: #bdd6db;
+} 
+
 /*------------------------------ Form styling */
 label {
   display: inline-block;
