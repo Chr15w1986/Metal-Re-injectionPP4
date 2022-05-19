@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{% load crispy_forms_tags %}
+
+{% block content %}
+
+{% load static %}
+
+<div class="masthead">
+    <div class="container-fluid px-4 px-lg-5 d-flex h-100 align-items-center justify-content-center">
+        <div class="d-flex justify-content-center">
+            <div class="text-center">
+                <h1 class="mx-auto my-4 text-uppercase">Edit a Track</h1>
+
+                {% if request.user.is_authenticated and user.id == song.author.id %}
+                <div class="row mt-5">
+                    <div class="col-12">
+                        <div>
+                            <form method="post">
+                                {% csrf_token %}
+                                {{ form|crispy }}
+                                <input class="btn btn-primary" type="submit" value="Update">
+                            </form>
+                        </div>
+                    </div>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
