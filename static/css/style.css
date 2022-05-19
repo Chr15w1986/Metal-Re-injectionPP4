@@ -1,0 +1,326 @@
+@charset "UTF-8";
+
+
+@media (prefers-reduced-motion: no-preference) {
+  :root {
+    scroll-behavior: smooth;
+  }
+}
+
+/*------------------------------ Heading and text styling */
+body {
+  letter-spacing: 0.0625em;
+}
+
+h6, h5, h4, h3, h2, h1 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  line-height: 1.2;
+  color: #bdd6db;
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  color: #bdd6db;
+}
+
+/*------------------------------ Masthead and headings with media queries */
+.masthead {
+  position: relative;
+  width: 100%;
+  height: auto;
+  min-height: 35rem;
+  padding-top: 7rem;
+  padding-bottom: 5rem;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.7) 75%, #000 100%), url("../assets/img/bg-masthead.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-size: cover;
+}
+
+.masthead h1,
+.masthead .h1 {
+  font-family: "Varela Round", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-size: 2.5rem;
+  line-height: 2.5rem;
+  letter-spacing: 0.8rem;
+  background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0));
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+.masthead h2,
+.masthead .h2 {
+  max-width: 20rem;
+  font-size: 1rem;
+}
+
+@media (min-width: 768px) {
+
+  .masthead h1,
+  .masthead .h1 {
+    font-size: 4rem;
+    line-height: 4rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .masthead {
+    height: 100vh;
+    padding: 0;
+  }
+
+  .masthead h1,
+  .masthead .h1 {
+    font-size: 5rem;
+    line-height: 4.5rem;
+    letter-spacing: 0.8rem;
+    padding-top: 20px;
+  }
+
+  .masthead h2,
+  .masthead .h2 {
+    max-width: 30rem;
+    font-size: 1.25rem;
+  }
+}
+
+/*------------------------------ Navbar styling */
+.navbar-light .navbar-nav .nav-link {
+  color: #bdd6db;
+}
+
+.navbar-light .navbar-nav .nav-link:hover,
+.navbar-light .navbar-nav .nav-link:focus {
+  color: #68755b;
+}
+
+.fixed-top {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 1030;
+}
+
+#mainNav {
+  min-height: 3.5rem;
+  background-color: #000;
+  opacity: 0.9;
+}
+
+#mainNav .navbar-toggler {
+  font-size: 80%;
+  padding: 0.75rem;
+  color: #bdd6db;
+  border: 1px solid #000;
+}
+
+#mainNav .navbar-toggler:hover {
+  color: #68755b;
+  border: 1px solid #68755b;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
+}
+
+#mainNav .navbar-brand {
+  color: #bdd6db;
+  font-weight: 700;
+  padding: 0.9rem 0;
+}
+
+@media (min-width: 992px) {
+  #mainNav {
+    padding-top: 0;
+    padding-bottom: 0;
+    border-bottom: none;
+    background-color: transparent;
+    transition: background-color 0.4s ease-in-out;
+  }
+
+  #mainNav .navbar-brand {
+    padding: 0.5rem 0;
+    color: #bdd6db;
+  }
+
+  #mainNav .nav-link {
+    transition: none;
+    padding: 2rem 1.5rem;
+    color: rgba(255, 255, 255, 0.5);
+  }
+
+  #mainNav .nav-link:hover {
+    color: rgba(255, 255, 255, 0.75);
+  }
+
+  #mainNav .nav-link:active {
+    color: #fff;
+  }
+
+  #mainNav.navbar-shrink {
+    background-color: #000;
+  }
+
+  #mainNav.navbar-shrink .navbar-brand {
+    color: #bdd6db;
+  }
+
+  #mainNav.navbar-shrink .nav-link {
+    padding: 1.5rem 1.5rem 1.25rem;
+    border-bottom: 0.25rem solid transparent;
+  }
+
+  #mainNav.navbar-shrink .nav-link:hover {
+    color: #64a19d;
+  }
+}
+
+/*------------------------------ Link styling */
+a {
+  color: #68755b;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #829272;
+}
+
+/*------------------------------ Form styling */
+label {
+  display: inline-block;
+  font-size: 25px;
+  color: #bdd6db;
+  padding-top: 10px;
+  padding-bottom: 5px;
+}
+
+label.requiredField {
+  font-size: 25px;
+  color: #bdd6db;
+  padding-top: 5px;
+  padding-bottom: 3px;
+}
+
+.form-text {
+  margin-top: 0.25rem;
+  font-size: 0.875em;
+  color: #6c757d;
+}
+
+.form-control {
+  display: block;
+  width: 100%;
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #212529;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border-radius: 1.25rem;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.form-control:focus {
+  color: #212529;
+  background-color: #fff;
+  border-color: #b2d0ce;
+  outline: 0;
+  box-shadow: 0 0 0 0.25rem rgba(100, 161, 157, 0.25);
+}
+
+.form-check .form-check-input {
+  margin-left: -2.5em;
+  margin-top: 1.35rem;
+}
+
+.form-check-input[type=checkbox] {
+  border-radius: 0.25em;
+}
+
+.form-check-input:checked {
+  background-color: #64a19d;
+  border-color: #3b956e;
+}
+
+/*------------------------------ Button styling */
+.btn-primary {
+  color: #fff;
+  background-color: #5c675f;
+  border-color: #ffffff;
+}
+
+.btn-primary:hover {
+  color: #fff;
+  background-color: #819586;
+  border-color: #ffffff;
+}
+
+.btn-sm {
+  padding: 0.2rem 0.3rem;
+  font-size: 0.95rem;
+  border-radius: 0.2rem;
+  width: 5.5rem;
+  border: 0;
+  letter-spacing: 0.05rem;
+}
+
+.btn {
+  box-shadow: 0 0.1875rem 0.1875rem 0 rgba(0, 0, 0, 0.1);
+  padding: 1.25rem 2rem;
+  font-family: "Varela Round", -apple-system, BlinkMacSystemFont, "Segoe UI", 
+                Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-size: 80%;
+  margin-top: 18px;
+  text-transform: uppercase;
+  letter-spacing: 0.15rem;
+  border: 0;
+}
+
+/*------------------------------ Pagination */
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 13px;
+  list-style: none;
+  font-size: 25px;
+}
+
+/*------------------------------ Social/contact links */
+.contact-section {
+  padding-top: 0.1rem;
+}
+
+.contact-section .social {
+  margin-top: 0.1rem;
+}
+
+.contact-section .social a {
+  text-align: center;
+  height: 3rem;
+  width: 3rem;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 100%;
+  line-height: 3rem;
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.contact-section .social a:hover {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.contact-section .social a:active {
+  color: #fff;
+}
+
+/*------------------------------ Footer styling */
+.footer {
+  padding: 3rem 0;
+}
