@@ -1,0 +1,84 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+{% load static %}
+
+<div class="masthead">
+    <div class="container-fluid px-4 px-lg-5 d-flex h-100 align-items-center justify-content-center">
+        <div class="d-flex justify-content-center">
+            <div class="text-center">
+                <h1 class="mx-auto my-4 text-uppercase">Your Tracks</h1>
+
+                <div class="row mt-5">
+                    {% for song in usersongs %}
+                    <div class="col-md-4">
+                        {% if request.user.is_authenticated %}
+                        <div class="card mb-4 box-shadow">
+                            <a href="{% url 'single-song' song.id %}">
+                                <div class="card-body">
+                                    <h4 style="font-size:18px;font-weight:bold;min-height:42px;">
+                                        Track: {{ song.title }}
+                                        <hr>
+                                        <p class="card-text">Artist: {{ song.artist }}</p>
+                                        <p class="card-text">Original Artist: <br>{{ song.original_artist }}</p>
+                                        <hr>
+                                        <p class="card-text">Submitted by: <br>{{ song.author }}
+                                            <p class="card-text">{{ song.added_on }}
+                                            </p>
+                                        </p>
+                                        {% if request.user == song.author %}
+                                        <div><br>
+                                            <a href="{% url 'update-song' song.id %}">
+                                                <button type="button" class="btn-primary btn-sm">Edit</button></a>
+                                            <a href="{% url 'delete-song' song.id %}">
+                                                <button type="button" class="btn-danger btn-sm">Delete</button></a>
+                                        </div>
+                                        {% endif %}
+                                    </h4>
+                                </div>
+                            </a>
+                        </div>
+                        {% else %}
+                        <div class="card mb-4 box-shadow">
+                            <div class="card-body">
+                                <h4>
+                                    Track: {{ song.title }}
+                                    <hr>
+                                    <p class="card-text">Artist: {{ song.artist }}</p>
+                                    <p class="card-text">Original Artist: <br>{{ song.original_artist }}
+                                </h4>
+                            </div>
+                        </div>
+                        {% endif %}
+                    </div>
+
+                    {% endfor %}
+
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="pagination">
+                                <span class="step-links">
+                                    <span class="current">
+                                        <p>Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}</p>
+                                    </span>
+                                    {% if page_obj.has_previous %}
+                                    <a href="?page=1">&laquo; first</a> |
+                                    <a href="?page={{ page_obj.previous_page_number }}">previous</a> |
+                                    {% endif %}
+
+                                    {% if page_obj.has_next %}
+                                    <a href="?page={{ page_obj.next_page_number }}">next</a> |
+                                    <a href="?page={{ page_obj.paginator.num_pages }}">last &raquo;</a>
+                                    {% endif %}
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
