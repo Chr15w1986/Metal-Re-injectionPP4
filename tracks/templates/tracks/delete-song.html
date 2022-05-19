@@ -8,9 +8,9 @@
     <div class="container-fluid px-4 px-lg-5 d-flex h-100 align-items-center justify-content-center">
         <div class="d-flex justify-content-center">
             <div class="text-center">
-                <h1 class="mx-auto my-0 text-uppercase">Delete a Track</h1>
+                <h1 class="mx-auto my-4 text-uppercase">Delete a Track</h1>
 
-                {% if request.user.is_authenticated %}
+                {% if request.user.is_authenticated  and user.id == song.author.id %}
                 <div class="row mt-5">
                     <div class="col-12">
                         <a href="{% url 'single-song' song.id %}">
