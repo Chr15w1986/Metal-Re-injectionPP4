@@ -23,18 +23,20 @@
                                         <hr>
                                         <p class="card-text">Artist: {{ song.artist }}</p>
                                         <p class="card-text">Original Artist: <br>{{ song.original_artist }}</p>
-                                            <hr>
-                                            <p class="card-text">Submitted by: <br>{{ song.author }}
-                                                <p class="card-text">{{ song.added_on }}
-                                                </p>
+                                        <hr>
+                                        <p class="card-text">Submitted by: <br>{{ song.author }}
+                                            <p class="card-text">{{ song.added_on }}
                                             </p>
-                                            {% if request.user == song.author %}
-                                            You added this track
-                                            <div><br>
-                                                <button type="button" class="btn-primary btn-sm">Edit</button>
-                                                <button type="button" class="btn-danger btn-sm">Delete</button>
-                                            </div>
-                                            {% endif %}
+                                        </p>
+                                        {% if request.user == song.author %}
+                                        You added this track
+                                        <div><br>
+                                            <a href="{% url 'update-song' song.id %}">
+                                                <button type="button" class="btn-primary btn-sm">Edit</button></a>
+                                            <a href="{% url 'delete-song' song.id %}">
+                                                <button type="button" class="btn-danger btn-sm">Delete</button></a>
+                                        </div>
+                                        {% endif %}
                                     </h4>
                                 </div>
                             </a>
