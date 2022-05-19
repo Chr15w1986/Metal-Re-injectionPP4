@@ -26,6 +26,18 @@ p {
   color: #bdd6db;
 }
 
+/*------------------------------ Card styling */
+.card-body {
+  background-color: #000; 
+  color: whitesmoke; 
+  box-shadow: 5px;
+  border-radius: 10px;
+}
+
+.card {
+  border: #000;
+}
+
 /*------------------------------ Masthead and headings with media queries */
 .masthead {
   position: relative;
