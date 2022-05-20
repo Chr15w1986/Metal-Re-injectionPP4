@@ -255,6 +255,7 @@ label.requiredField {
 .form-check .form-check-input {
   margin-left: -2.5em;
   margin-top: 1.35rem;
+  float: none;
 }
 
 .form-check-input[type=checkbox] {
