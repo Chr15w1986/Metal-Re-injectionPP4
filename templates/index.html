@@ -2,23 +2,32 @@
 
 {% block content %}
 
+{% load static %}
 
-    <div class="masthead">
-        <div class="container px-4 px-lg-5 d-flex h-100 align-items-center justify-content-center">
-            <div class="d-flex justify-content-center">
-                <div class="text-center">
-                    <h1 class="mx-auto my-0 text-uppercase">Metal Re-Injection</h1>
-                    <h2 class="text-white-50 mx-auto mt-2 mb-5">Where the worlds most <strong>popular</strong> tracks
-                        <br>
-                        have been remixed and covered by the worlds most <strong>unpopular</strong> genre of music..
-                        <br>METAL!! <br>
-                        Allow your ears to bleed and your toes curl as you <strong>rate</strong> your favourite covers
-                        of all time
-                        hits.</h2>
-                    <a class="btn btn-primary" href="#login">Login</a>
-                </div>
+<div class="masthead">
+    <div class="container px-4 px-lg-5 d-flex h-100 align-items-center justify-content-center">
+        <div class="d-flex justify-content-center">
+            <div class="text-center">
+                <h1 class="mx-auto my-0 text-uppercase">Metal Re-Injection</h1>
+                <h2 class="text-white-50 mx-auto mt-4 mb-3">Where the worlds most <strong>popular</strong> tracks
+                    <br>
+                    have been remixed and covered by the worlds most <strong>unpopular</strong> genre of music..
+                    <br>METAL!! <br>
+                    Allow your ears to bleed and your toes curl as you <strong>rate</strong> your favourite covers
+                    of all time
+                    hits.</h2>
+                    <br>
+                {% if request.user.is_authenticated %}
+                <h2 class="text-white-50 mx-auto mt-2 mb-2">Please choose an option:</h2>
+                <a class="btn btn-primary" href="{% url 'song-list' %}">Track List</a></li>
+                <a class="btn btn-primary" href="{% url 'add-song' %}">Add a Track</a></li>
+                <a class="btn btn-primary" href="{% url 'user-songs' %}">My Tracks</a></li>
+                {% else %}
+                <a class="btn btn-primary" href="{% url 'account_login' %}">Login</a>
+                {% endif %}
             </div>
         </div>
     </div>
+</div>
 
 {% endblock %}

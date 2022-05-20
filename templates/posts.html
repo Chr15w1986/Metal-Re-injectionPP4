@@ -6,13 +6,12 @@
     <div class="container px-4 px-lg-5 d-flex h-100 align-items-center justify-content-center">
         <div class="d-flex justify-content-center">
             <div class="text-center">
-                <h1 class="mx-auto my-0 text-uppercase">Latest Reviews</h1>
+                <h1 class="mx-auto my-4 text-uppercase">Latest Reviews</h1>
 
                 <div class="row mt-5">
                     {% for post in post_list %}
                     <div class="col-md-4">
-                        <div class="card mb-4 box-shadow"
-                            style="background-color: black; color: whitesmoke; box-shadow: 5px;">
+                        <div class="card mb-4 box-shadow">
                             <div class="card-body">
                                 <h4 style="font-size:18px;font-weight:bold;min-height:42px;">
                                     {{ post.title }}<br>

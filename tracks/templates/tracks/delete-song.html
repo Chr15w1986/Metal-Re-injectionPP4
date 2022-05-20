@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+{% load static %}
+
+<div class="masthead">
+    <div class="container-fluid px-4 px-lg-5 d-flex h-100 align-items-center justify-content-center">
+        <div class="d-flex justify-content-center">
+            <div class="text-center">
+                <h1 class="mx-auto my-4 text-uppercase">Delete a Track</h1>
+
+                {% if request.user.is_authenticated  and user.id == song.author.id %}
+                <div class="row mt-5">
+                    <div class="col-12">
+                        <a href="{% url 'single-song' song.id %}">
+                            <div class="card mb-4 box-shadow">
+                                <div class="card-body">
+                                    <h4 style="font-size:18px;font-weight:bold;min-height:42px;">
+                                        Track: {{ song.title }}
+                                        <br>
+                                        <p class="card-text"><br>Artist: {{ song.artist }}</p>
+                                        <p class="card-text">Original Artist: {{ song.original_artist }}<br>
+                                        </p>
+                                    </h4>
+                                    <br>
+                                    <form method="post">
+                                        {% csrf_token %}
+                                        <p>Are you sure {{ song.author }}, that you would like to delete
+                                            "{{ song.title }}"
+                                            by "{{ song.artist }}"?</p>
+                                        <input class="btn btn-primary" type="submit" value="Confirm">
+                                    </form>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
