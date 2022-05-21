@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django_summernote',
+    'star_ratings',
     'crispy_forms',
 
     # Authorisation:
@@ -69,6 +70,8 @@ LOGOUT_REDIRECT_URL = '/'
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 ACCOUNT_EMAIL_VERIFICATION = 'none'
+
+STAR_RATINGS_RERATE_SAME_DELETE = True
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
