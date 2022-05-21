@@ -128,6 +128,34 @@ I used [Coolors](https://coolors.co/) to generate a colour palette based on the 
 </details>
 
 
+* Font Selection
+ 
+Two fonts were chosen with [Google Fonts](https://fonts.google.com/) to be used across the entire site.
+
+The chosen fonts were Varela Round, Segoe UI with Roboto and Lato as back up fonts for lists, forms, buttons and paragraphs.
+
+## Existing Features
+
+### **Navbar**
+
++ Fixed Navbar allow the user easy access to all pages.
+
+1. Tracklist, Login and Signup buttons on the navbar are the only buttons present if the user is `not` logged in.
+
+<img width="800" src="static/assets/img/readme_img/features/loggedoutnavbar.png">
+
+2. Tracklist, Add a Track, My Tracks and Logout buttons are only present if the user has successfully logged in.
+
+<img width="800" src="static/assets/img/readme_img/features/loggedinusernavbar.png">
+
+3. Track list is available to view to all users (logged in or not), however, the tracks cannot be played until<br>
+the user logs in, or signs up.
+
+4. Collapsed navbar on smaller devices to wrap in all options and assure better navbar design.
+
+  <img width="400" src="static/assets/img/readme_img/features/collapsed-navbar.png">
+
+
 https://trello.com/b/LcAoo35I/metal-re-injection-pp4
 
-installed django, gunicorn, psycopg2, cloudinary, bootstrap, summernote (check requirements)
+install django, gunicorn, psycopg2, cloudinary, bootstrap, summernote, allauth, star-ratings, whitenoise
