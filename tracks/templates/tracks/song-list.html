@@ -14,8 +14,7 @@
                     {% for song in songs %}
                     <div class="col-md-4">
                         {% if request.user.is_authenticated %}
-                        <div class="card mb-4 box-shadow"
-                            style="background-color: black; color: whitesmoke; box-shadow: 5px;">
+                        <div class="card mb-4 box-shadow">
                             <a href="{% url 'single-song' song.id %}">
                                 <div class="card-body">
                                     <h4 style="font-size:18px;font-weight:bold;min-height:42px;">
@@ -42,8 +41,7 @@
                             </a>
                         </div>
                         {% else %}
-                        <div class="card mb-4 box-shadow"
-                            style="background-color: black; color: whitesmoke; box-shadow: 5px;">
+                        <div class="card mb-4 box-shadow">
                             <div class="card-body">
                                 <h4>
                                     Track: {{ song.title }}
@@ -55,9 +53,9 @@
                         </div>
                         {% endif %}
                     </div>
-
+                    
                     {% endfor %}
-
+                                        
                     <div class="row">
                         <div class="col-12">
                             <div class="pagination">
