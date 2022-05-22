@@ -180,8 +180,19 @@ two buttons, `Edit` `Delete`.
   
    ii. Delete Track (highlighted in red)
 
+### **Update/Edit Track Page**
 
+1. On this page, a logged user can change the information made by them. All fields are already populated, allowing the user to see which information they would like to change.
+2. The `Go back` button will redirect the user to the Rate a Track page without any changes.
 
-https://trello.com/b/LcAoo35I/metal-re-injection-pp4
+<img width="700" src="static/assets/img/readme_img/features/editatrackpage.png">
+
+### **Delete a Track Page**
+
+1. If the user clicks on delete a track, they will be redirected to Delete a Track page to confirm the deletion or cancel it.
+2. The `Go back` button will redirect the user to the Rate a Track page without any changes.
+
+<img width="700" src="static/assets/img/readme_img/features/deleteatrackpage.png">
+
 
 install django, gunicorn, psycopg2, cloudinary, bootstrap, summernote, allauth, star-ratings, whitenoise
