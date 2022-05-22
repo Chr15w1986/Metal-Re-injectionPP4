@@ -30,6 +30,10 @@
                                             "{{ song.title }}"
                                             by "{{ song.artist }}"?</p>
                                         <input class="btn btn-primary" type="submit" value="Confirm">
+                                        <div><br>
+                                            <a href="{% url 'single-song' song.id %}">
+                                                <button type="button" class="btn-danger btn-sm">Go Back</button></a>
+                                        </div>
                                     </form>
                                 </div>
                             </div>
