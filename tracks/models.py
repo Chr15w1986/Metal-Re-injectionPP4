@@ -10,8 +10,8 @@ class Song(models.Model):
     artist = models.CharField(max_length=200, null=False, blank=False)
     original_artist = models.CharField(max_length=200, null=False, blank=False)
     author = models.ForeignKey(
-                User, on_delete=models.CASCADE, null=False, blank=False,
-                related_name='author')
+        User, on_delete=models.CASCADE, null=False, blank=False,
+        related_name='author')
     url = models.URLField(null=False, blank=False)
     added_on = models.DateTimeField(auto_now=True)
     status = models.IntegerField(choices=STATUS, default=0)
