@@ -22,7 +22,7 @@ class Post(models.Model):
         User, related_name='track_like', blank=True)
     song = models.ForeignKey(
         Song, on_delete=models.CASCADE, related_name="cover"
-        )
+    )
 
     class Meta:
         ordering = ["-created_on"]
