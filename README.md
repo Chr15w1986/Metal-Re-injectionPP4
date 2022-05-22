@@ -228,10 +228,18 @@ I would like to ...
 #
 ## Languages Used
 
-<img width="200" height="150" src="static/assets/img/readme_img/languages/python3.png">
-<img width="200" height="150" src="static/assets/img/readme_img/languages/html5.png">
-<img width="200" height="150" src="static/assets/img/readme_img/languages/css3.png">
-<img width="200" height="150" src="static/assets/img/readme_img/languages/js.png">
+<img width="200" height="150" src="static/assets/img/readme_img/languages/python3.png"><img width="200" height="150" src="static/assets/img/readme_img/languages/html5.png"><img width="200" height="150" src="static/assets/img/readme_img/languages/css3.png"><img width="200" height="150" src="static/assets/img/readme_img/languages/js.png">
+
+## Frameworks, Libraries & Programs Used
+
++ Balsamiq: Balsamiq was used to create the wireframes during the design process.
++ Favicon Generator: Used to create favicon used on the website.
++ Grammarly: Used to correct any spell mistakes on readme and app text.
++ Git: Gitpod IDE was used for version control by utilizing the Gitpod terminal to commit and Push to GitHub.
++ GitHub: GitHub respository is used to store the project's code after being pushed from Gitpod.
++ Google Fonts: Google fonts are used to add fonts for aesthetic and UX purposes.
++ Django: Framework used to add structure to the platform.
++ AmIResponsive: Used to generate mockup image.
 
 
 install django, gunicorn, psycopg2, cloudinary, bootstrap, summernote, allauth, star-ratings, whitenoise
