@@ -8,10 +8,8 @@ by the worlds most unpopular genre of music.. METAL!</p>
 <br>
 <h1 align=center>Welcome to Metal-Re-Injection</h1>
 
-
-
 ## FINAL DESIGN
-
+<br>
 <img src="static/assets/img/readme_img/Amiresponsive.png">
 
 #
@@ -25,11 +23,11 @@ by the worlds most unpopular genre of music.. METAL!</p>
 1. As a user, I would like to be able to …
 
     1.1 Register on the website using my username, email address and password;
-    
+
     1.2 View all tracks added on the site;
-    
+
     1.3 View details about all added tracks.
-    
+
     1.4 View tracklist on the navbar.  
 
 2. As a logged in user, I would like to be able to …
@@ -45,7 +43,7 @@ by the worlds most unpopular genre of music.. METAL!</p>
     2.3 Check my track review after added;
 
     2.4 Edit or delete my track ratings.
-
+#
 ### 1. Strategy
 
   + **Project Goal**
@@ -70,7 +68,6 @@ by the worlds most unpopular genre of music.. METAL!</p>
 ![MRI Flowchart](static/assets/img/readme_img/Metal-Re-Injection.png)
 </details>
 
-#
 
 **Agile Methodology**
 
@@ -133,7 +130,7 @@ I used [Coolors](https://coolors.co/) to generate a colour palette based on the 
 Two fonts were chosen with [Google Fonts](https://fonts.google.com/) to be used across the entire site.
 
 The chosen fonts were Varela Round, Segoe UI with Roboto and Lato as back up fonts for lists, forms, buttons and paragraphs.
-
+#
 ## Existing Features
 
 ### **Navbar**
@@ -180,6 +177,17 @@ two buttons, `Edit` `Delete`.
   
    ii. Delete Track (highlighted in red)
 
+### **Track rating system**
+
+1. Underneath the single song on the `Rate a Track` page, the user has the option to rate the current track out of 5 stars.
+
+    i. The user can rate any song while logged in.
+    ii. The user can change their rating while logged in.
+    iii. The number of total ratings and average ratings are shown and match the stars accordingly.
+
+
+  <img width="700"  src="static/assets/img/readme_img/features/ratings.png">
+
 ### **Update/Edit Track Page**
 
 1. On this page, a logged user can change the information made by them. All fields are already populated, allowing the user to see which information they would like to change.
@@ -193,6 +201,37 @@ two buttons, `Edit` `Delete`.
 2. The `Go back` button will redirect the user to the Rate a Track page without any changes.
 
 <img width="700" src="static/assets/img/readme_img/features/deleteatrackpage.png">
+
+### **Custom 404 Page not found**
+
+* I have created a custom 404 error page to catch if the user inputs the wrong page number, or if a page or feature does not exist.
+* I have included a button to redirect back to home.
+
+<!-- IMAGE HERE -->
+
+### **Custom 500 Internal server error**
+
+* I have created a custom 500 error page to redirect to if there are any issues with the database including a button to redirect back to home.
+
+<!-- IMAGE HERE -->
+#
+## Future Features
+
+I would like to ...
+
+1. Add a infinite smooth scroll carousel to list all tracks on the same page.
+2. Add a search bar to find artists and or tracks.
+3. Create an option for the user to add a song from another source, i.e. Youtube, Deezer.
+4. Include a user profile page allowing users to edit, or delete their profile.
+5. Include a comments section to be used with the rating system.
+
+#
+## Languages Used
+
+<img width="200" height="150" src="static/assets/img/readme_img/languages/python3.png">
+<img width="200" height="150" src="static/assets/img/readme_img/languages/html5.png">
+<img width="200" height="150" src="static/assets/img/readme_img/languages/css3.png">
+<img width="200" height="150" src="static/assets/img/readme_img/languages/js.png">
 
 
 install django, gunicorn, psycopg2, cloudinary, bootstrap, summernote, allauth, star-ratings, whitenoise
