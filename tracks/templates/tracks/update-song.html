@@ -20,6 +20,10 @@
                                 {% csrf_token %}
                                 {{ form|crispy }}
                                 <input class="btn btn-primary" type="submit" value="Update">
+                                <div><br>
+                                    <a href="{% url 'single-song' song.id %}">
+                                        <button type="button" class="btn-danger btn-sm">Go Back</button></a>
+                                </div>
                             </form>
                         </div>
                     </div>
