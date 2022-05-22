@@ -22,7 +22,7 @@ class UserSongList(ListView):
 
     def get_queryset(self):
         return Song.objects.filter(
-            author=self.request.user, status=1).order_by('artist')
+            author=self.request.user, status=1).order_by('-added_on')
 
 
 class AddSong(CreateView, LoginRequiredMixin):
