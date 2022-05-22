@@ -142,11 +142,11 @@ The chosen fonts were Varela Round, Segoe UI with Roboto and Lato as back up fon
 
 1. Tracklist, Login and Signup buttons on the navbar are the only buttons present if the user is `not` logged in.
 
-<img width="800" src="static/assets/img/readme_img/features/loggedoutnavbar.png">
+<img width="700" src="static/assets/img/readme_img/features/loggedoutnavbar.png">
 
 2. Tracklist, Add a Track, My Tracks and Logout buttons are only present if the user has successfully logged in.
 
-<img width="800" src="static/assets/img/readme_img/features/loggedinusernavbar.png">
+<img width="700" src="static/assets/img/readme_img/features/loggedinusernavbar.png">
 
 3. Track list is available to view to all users (logged in or not), however, the tracks cannot be played until<br>
 the user logs in, or signs up.
@@ -154,6 +154,32 @@ the user logs in, or signs up.
 4. Collapsed navbar on smaller devices to wrap in all options and assure better navbar design.
 
   <img width="400" src="static/assets/img/readme_img/features/collapsed-navbar.png">
+
+### **Track list page**
+
+1. On this page, users can view all user added tracks ordered by latest date/time added, including pagination.
+
+  <img width="700" src="static/assets/img/readme_img/features/tracklistpage.png">
+
+* Each card contains Track title, Cover Artist, Original Artist, Author, Publication date and if the author owns the track, 
+two buttons, `Edit` `Delete`.
+
+* The entire card is a link to the Rate a track page.
+
+### **Rate a Track page** 
+
+* Here the User has the ability to listen to the track and give it a rating out of 5 stars.
+
+<img width="700" src="static/assets/img/readme_img/features/rateatrackpage.png">
+
+  1.1 If the user is the author, the same `Edit` `Delete` buttons will be present.
+
+<img width="400" src="static/assets/img/readme_img/features/authoreditdelete.png">
+
+   i. Edit Track (highlighted in green)
+  
+   ii. Delete Track (highlighted in red)
+
 
 
 https://trello.com/b/LcAoo35I/metal-re-injection-pp4
