@@ -6,9 +6,9 @@ STATUS = ((0, "Draft"), (1, "Published"))
 
 
 class Song(models.Model):
-    title = models.CharField(max_length=200, null=False, blank=False)
-    artist = models.CharField(max_length=200, null=False, blank=False)
-    original_artist = models.CharField(max_length=200, null=False, blank=False)
+    title = models.CharField(max_length=25, null=False, blank=False)
+    artist = models.CharField(max_length=25, null=False, blank=False)
+    original_artist = models.CharField(max_length=25, null=False, blank=False)
     author = models.ForeignKey(
         User, on_delete=models.CASCADE, null=False, blank=False,
         related_name='author')
