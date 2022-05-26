@@ -1,9 +1,8 @@
+from urllib.parse import urljoin, urlparse, urlsplit
 from django.urls import reverse_lazy
 from django.views.generic import ListView, DetailView
 from django.views.generic.edit import CreateView, DeleteView, UpdateView
 from django.contrib.auth.mixins import LoginRequiredMixin
-from django.contrib import messages
-from .spotify_tools import test_and_rebuild_link
 from .forms import SongForm
 from .models import Song
 
@@ -31,22 +30,14 @@ class AddSong(CreateView, LoginRequiredMixin):
     form_class = SongForm
     template_name = 'tracks/add-song.html'
     success_url = reverse_lazy('song-list')
-    url = SongForm.Meta.fields('https://open.spotify.com/track/')
-    embedded_url = test_and_rebuild_link(url)
+    # urlparse('https://open.spotify.com/')
+    urlsplit('https://open.spotify.com/')
+    urljoin('https://open.spotify.com/', 'embed/track/')
+    print(urlparse('https://open.spotify.com/'))
+    print(urlsplit('https://open.spotify.com/'))
 
     def form_valid(self, form):
         form.instance.author = self.request.user
-    if form.is_valid():
-        form.instance.author = self.request.user
-        form.save()
-        messages.success(request, "Your track is awaiting approval")
-        return redirect('home')
-
-    if not embedded_url:
-        messages.error(request, 'Sorry, thats not a valid Spotify url! Try again')
-        context = {'url': form}
-    else:
-        form = SongForm(embedded_url)
         return super().form_valid(form)
 
 
