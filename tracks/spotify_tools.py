@@ -1,7 +1,9 @@
 from urllib.parse import urlparse
 import spotipy
 from spotipy.oauth2 import SpotifyClientCredentials
+import os
 
+os.environ["SPOTIPY_CLIENT_ID"] = "ee3d2bde9e494a87990ee51eeaa640eb"
 
 auth_manager = SpotifyClientCredentials()
 sp = spotipy.Spotify(auth_manager=auth_manager)
