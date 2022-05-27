@@ -14,7 +14,7 @@ class Song(models.Model):
         related_name='author')
     url = models.URLField(null=False, blank=False)
     added_on = models.DateTimeField(auto_now=True)
-    status = models.IntegerField(choices=STATUS, default=0)
+    status = models.IntegerField(choices=STATUS, default=1)
 
     class Meta:
         ordering = ['added_on']
