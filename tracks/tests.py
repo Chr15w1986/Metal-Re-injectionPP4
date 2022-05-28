@@ -1,6 +1,8 @@
 """ Testing module for spotify URLs """
 
 import unittest
+from django.test import TestCase
+from django.contrib.auth import get_user_model
 from .spotify_tools import test_and_rebuild_link
 
 
@@ -37,3 +39,20 @@ class TestSpotifyTools(unittest.TestCase):
         expected_output = 'https://open.spotify.com/embed/track/421eObjg0DTm2qajJl5OJm'
 
         self.assertEqual(rebuilt_url, expected_output)
+
+
+class TestAddSong(TestCase):
+    """ Tests for Form Submission """
+    def setUp(self):
+        """ Initial setup for all tests, for logging in """
+        # Setup Username and Password
+        username = "Test_Account"
+        pswd = "Test_Password" # noqa
+        # Get User model, assign to self, and log in
+        user_model = get_user_model()
+        self.user = user_model.objects.create_user(username=username,
+                                                   password=pswd,
+                                                   is_superuser=True)
+        logged_in = self.client.login(username=username, password=pswd)
+        # Test if login is successful
+        self.assertTrue(logged_in)
