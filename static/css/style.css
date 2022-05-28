@@ -50,7 +50,8 @@ p {
   min-height: 35rem;
   padding-top: 7rem;
   padding-bottom: 5rem;
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.7) 75%, #000 100%), url("../assets/img/bg-masthead.jpg");
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.7) 75%, #000 100%), 
+              url("https://res.cloudinary.com/chr15w1986/image/upload/v1652380605/static/assets/img/bg-masthead.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: scroll;
@@ -59,7 +60,8 @@ p {
 
 .masthead h1,
 .masthead .h1 {
-  font-family: "Varela Round", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: "Varela Round", "Segoe UI", Roboto, "Helvetica Neue", 
+                Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-size: 2.5rem;
   line-height: 2.5rem;
   letter-spacing: 0.8rem;
@@ -196,7 +198,7 @@ p {
 
 /*------------------------------ Link styling */
 a {
-  color: #68755b;
+  color: #abbc9a;
   text-decoration: none;
 }
 
