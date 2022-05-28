@@ -59,6 +59,23 @@ class TestAddSong(TestCase):
         # Test if login is successful
         self.assertTrue(logged_in)
 
+    def test_valid_form(self):
+        """Tests Valid Form Submission"""
+        data = {
+            'title': "Song",
+            'artist': "Artist",
+            'original_artist': "Original",
+            'url': "https://open.spotify.com/embed/track/421eObjg0DTm2qajJl5OJm"
+        }
+        # Send HTTP Response to addsong with Data
+        response = self.client.post("/tracks/addsong/", data, follow=True)
+        # Query how many songs are in the DB
+        songs_in_database = len(Song.objects.all())
+        # Test 1 song is in Database
+        self.assertEqual(songs_in_database, 1)
+        # Test Redirected to Songs List after submission
+        self.assertRedirects(response, '/tracks/song-list/')
+
     def test_form_validation_invalid_url(self):
         """Tests Invalid Form Submission (Not a URL)"""
         # Prepare invalid form data (not a valid URL)
