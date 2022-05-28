@@ -29,3 +29,11 @@ class TestSpotifyTools(unittest.TestCase):
         expected_output = False
 
         self.assertEqual(rebuilt_url, expected_output)
+
+    def test_invalid_domain_correct_id(self):
+        """Tests an valid song with wrong domain"""
+        url_to_test = 'https://open.spotty.com/track/421eObjg0DTm2qajJl5OJm?si=fb5b7307c0434ab5'
+        rebuilt_url = test_and_rebuild_link(url_to_test)
+        expected_output = 'https://open.spotify.com/embed/track/421eObjg0DTm2qajJl5OJm'
+
+        self.assertEqual(rebuilt_url, expected_output)
