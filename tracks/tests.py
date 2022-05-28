@@ -4,6 +4,8 @@ import unittest
 from django.test import TestCase
 from django.contrib.auth import get_user_model
 from .spotify_tools import test_and_rebuild_link
+from .models import Song
+from .forms import SongForm
 
 
 class TestSpotifyTools(unittest.TestCase):
@@ -56,3 +58,24 @@ class TestAddSong(TestCase):
         logged_in = self.client.login(username=username, password=pswd)
         # Test if login is successful
         self.assertTrue(logged_in)
+
+    def test_form_validation_invalid_url(self):
+        """Tests Invalid Form Submission (Not a URL)"""
+        # Prepare invalid form data (not a valid URL)
+        data = {
+            'title': "Song",
+            'artist': "Artist",
+            'original_artist': "Original",
+            'url': "donkey"
+        }
+        form = SongForm(data=data)
+        # Ensure url is validated
+        self.assertIn("Enter a valid URL.", form.errors['url'])
+        # Send HTTP Response to addsong with data
+        response = self.client.post("/tracks/addsong/", data, follow=True)
+        # Query how many songs are in the DB
+        songs_in_database = len(Song.objects.all())
+        # Test 0 songs are in Database
+        self.assertEqual(songs_in_database, 0)
+        # Test the user remains on the add-song page
+        self.assertTemplateUsed(response, 'tracks/add-song.html')
