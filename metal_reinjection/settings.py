@@ -145,8 +145,6 @@ AUTHENTICATION_BACKENDS = [
     'allauth.account.auth_backends.AuthenticationBackend',
 ]
 
-
-
 ACCOUNT_AUTHENTICATION_METHOD = 'email'
 ACCOUNT_EMAIL_REQUIRED = True
 ACCOUNT_EMAIL_VERIFICATION = 'mandatory'
@@ -163,7 +161,7 @@ EMAIL_PORT = 587
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_HOST_USER = os.environ.get('EMAIL_HOST_USER')
 EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASS')
-DEFAULT_FROM_EMAIL = os.environ.get('EMAIL_HOST_USER')
+# DEFAULT_FROM_EMAIL = os.environ.get('EMAIL_HOST_USER')
 
 # Internationalization
 # https://docs.djangoproject.com/en/3.2/topics/i18n/

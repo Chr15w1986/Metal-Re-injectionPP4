@@ -302,4 +302,11 @@ Metal-Re-Injection is deployed using Heroku.
 
 </details>
 
+Force users to input email twice, 
+verification
+
+Manual email verification within admin site to verify emails and users. due to smtp
+
 install django, gunicorn, psycopg2, cloudinary, bootstrap, summernote, allauth, star-ratings, whitenoise
+
+getting error messages relating to spotipy, some parts of the standard import have been overridden but some errors till remain

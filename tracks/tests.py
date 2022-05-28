@@ -96,3 +96,17 @@ class TestAddSong(TestCase):
         self.assertEqual(songs_in_database, 0)
         # Test the user remains on the add-song page
         self.assertTemplateUsed(response, 'tracks/add-song.html')
+
+    def test_form_validation_invalid_spotify(self):
+        """Tests Invalid Form Submission (Incorrect URL)"""
+        # Prepare invalid form data (not a valid Spotify Track)
+        data = {
+            'title': "Song",
+            'artist': "Artist",
+            'original_artist': "Original",
+            'url': "www.spotify.com/invalid-song"
+        }
+        # Prepare Form
+        form = SongForm(data=data)
+        # Ensure url is appropriately validated
+        self.assertIn("Sorry, that's not a valid Spotify link!", form.errors['url'])
