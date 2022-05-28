@@ -13,5 +13,8 @@ urlpatterns = [
     path('posts/', include('posts.urls')),
 ]
 
+""" Error handlers """
+
 HANDLER404 = "metal_reinjection.views.page_not_found_view"
 HANDLER500 = "metal_reinjection.views.custom_500_error_view"
+HANDLER403 = "metal_reinjection.views.custom_403_error_view"
