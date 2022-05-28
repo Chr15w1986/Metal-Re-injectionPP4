@@ -63,7 +63,7 @@ INSTALLED_APPS = [
 ]
 
 SITE_ID = 1
-
+# Crispy template pack
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 # Ratings settings
