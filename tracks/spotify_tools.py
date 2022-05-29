@@ -1,3 +1,4 @@
+""" Spotify url rebuild module """
 from urllib.parse import urlparse
 import spotipy
 from spotipy.oauth2 import SpotifyClientCredentials
