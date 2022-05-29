@@ -207,20 +207,25 @@ two buttons, `Edit` `Delete`.
 * I have created a custom 404 error page to catch if the user inputs the wrong page number, or if a page or feature does not exist.
 * I have included a button to redirect back to home.
 
-<!-- IMAGE HERE -->
+<img width="700" src="static/assets/img/readme_img/testing_img/404error.png">
 
 ### **Custom 500 Internal server error**
 
 * I have created a custom 500 error page to redirect to if there are any issues with the database including a button to redirect back to home.
 
-<!-- IMAGE HERE -->
+<img width="700" src="static/assets/img/readme_img/testing_img/500error.png">
+
+### **Custom 403 Forbidden page**
+
+* I have also created a custom 403 forbidden error page to redirect to if there are any instances where a user tries to access a secure area of the site (e.g admin), including a button to redirect back to home.
+
 #
 ## Future Features
 
 I would like to ...
 
-1. Add a infinite smooth scroll carousel to list all tracks on the same page.
-2. Add a search bar to find artists and or tracks.
+1. Add a search bar to find artists and or tracks.
+2. Add an infinite smooth scroll carousel to list all tracks on the same page.
 3. Create an option for the user to add a song from another source, i.e. Youtube, Deezer.
 4. Include a user profile page allowing users to edit, or delete their profile.
 5. Include a comments section to be used with the rating system.
@@ -240,6 +245,10 @@ I would like to ...
 + Google Fonts: Google fonts are used to add fonts for aesthetic and UX purposes.
 + Django: Framework used to add structure to the platform.
 + AmIResponsive: Used to generate mockup image.
+
+## Testing and Code validation
+
+All testing and code validation details are described in a separate file [TESTING.md](TESTING.md).
 
 ## Deployment
 
@@ -302,11 +311,45 @@ Metal-Re-Injection is deployed using Heroku.
 
 </details>
 
-Force users to input email twice, 
-verification
+<details>
+<summary>Forking the GitHub Repository </summary>
 
-Manual email verification within admin site to verify emails and users. due to smtp
+* By forking the GitHub Repository, you will be able to make a copy of the original repository on your own GitHub account, allowing you to view and/or make changes without affecting the original repository by using the following steps:
 
-install django, gunicorn, psycopg2, cloudinary, bootstrap, summernote, allauth, star-ratings, whitenoise
+    - Log in to your own GitHub and locate the GitHub Repository you wish to fork
+    - At the top of the Repository (not top of page), just above the "Settings" button on the menu, locate the "Fork" button.
+    - You should now have a copy of the original repository in your GitHub account.
 
-getting error messages relating to spotipy, some parts of the standard import have been overridden but some errors till remain
+* Making a Local Clone
+
+    - Log in to your own GitHub and locate the GitHub Repository
+    - Under the repository name, click "Clone or download".
+    - To clone the repository using HTTPS, under "Clone with HTTPS", copy the link.
+    - Open Git Bash
+    - Change the current working directory to the location where you want the cloned directory to be made.
+    - Type git clone, and then paste the URL you copied in Step 3.
+
+ $ git clone https://github.com/Chr15w1986/Metal-Re-injectionPP4
+
+Press Enter. Your local clone will be created.
+
+</details>
+
+
+## Credits and references
+
+### Images
+
+* Background image of a stage viewed from the crowd, [artwanted](https://www.artwanted.com/imageview.cfm?id=872661)
+
+## Acknowledgements
+
+- Code institute for the amazing Tutors on the course
+- My brilliant Mentor Ben Kavanagh, [BAK2K3](https://github.com/BAK2K3) for his patience, excellent advice on my code, pushing me back on track
+    when I start to lose faith, taking time out of his own day and duties to answer ALL of my questions with absolute perfection, and just generally being a Python god!
+- Shellie Downie [ShellieD](https://github.com/shellieD), for her support.. two heads are always better than one!
+- Matt Boden [MattBCoding](https://github.com/MattBCoding), for being an absolute god at pointing out the obvious
+(and all round genius).
+- My family for their support, patience and testing!!
+- My wonderful fiancée for being my personal spell checker/grammer police and for listening to me when I need to rant!
+- Everybody on Slack for tips, advice, quick fixes and support
