@@ -1,3 +1,4 @@
+""" Posts URLS modules """
 from django.urls import path
 from . import views
 

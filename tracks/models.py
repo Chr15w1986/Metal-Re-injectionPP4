@@ -6,6 +6,7 @@ STATUS = ((0, "Draft"), (1, "Published"))
 
 
 class Song(models.Model):
+    """ Creates song form """
     title = models.CharField(max_length=25, null=False, blank=False)
     artist = models.CharField(max_length=25, null=False, blank=False)
     original_artist = models.CharField(max_length=25, null=False, blank=False)

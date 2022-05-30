@@ -20,9 +20,9 @@ class TestSpotifyTools(unittest.TestCase):
 
     def test_valid_url(self):
         """Tests an correct URL"""
-        url_to_test = 'https://open.spotify.com/track/421eObjg0DTm2qajJl5OJm?si=fb5b7307c0434ab5'
+        url_to_test = 'https://open.spotify.com/track/421eObjg0DTm2qajJl5OJm?si=fb5b7307c0434ab5' # noqa
         rebuilt_url = test_and_rebuild_link(url_to_test)
-        expected_output = 'https://open.spotify.com/embed/track/421eObjg0DTm2qajJl5OJm'
+        expected_output = 'https://open.spotify.com/embed/track/421eObjg0DTm2qajJl5OJm' # noqa
 
         self.assertEqual(rebuilt_url, expected_output)
 
@@ -36,9 +36,9 @@ class TestSpotifyTools(unittest.TestCase):
 
     def test_invalid_domain_correct_id(self):
         """Tests an valid song with wrong domain"""
-        url_to_test = 'https://open.spotty.com/track/421eObjg0DTm2qajJl5OJm?si=fb5b7307c0434ab5'
+        url_to_test = 'https://open.spotty.com/track/421eObjg0DTm2qajJl5OJm?si=fb5b7307c0434ab5' # noqa
         rebuilt_url = test_and_rebuild_link(url_to_test)
-        expected_output = 'https://open.spotify.com/embed/track/421eObjg0DTm2qajJl5OJm'
+        expected_output = 'https://open.spotify.com/embed/track/421eObjg0DTm2qajJl5OJm' # noqa
 
         self.assertEqual(rebuilt_url, expected_output)
 
@@ -65,7 +65,7 @@ class TestAddSong(TestCase):
             'title': "Song",
             'artist': "Artist",
             'original_artist': "Original",
-            'url': "https://open.spotify.com/embed/track/421eObjg0DTm2qajJl5OJm"
+            'url': "https://open.spotify.com/embed/track/421eObjg0DTm2qajJl5OJm" # noqa
         }
         # Send HTTP Response to addsong with Data
         response = self.client.post("/tracks/addsong/", data, follow=True)
@@ -109,4 +109,4 @@ class TestAddSong(TestCase):
         # Prepare Form
         form = SongForm(data=data)
         # Ensure url is appropriately validated
-        self.assertIn("Sorry, that's not a valid Spotify link!", form.errors['url'])
+        self.assertIn("Sorry, that's not a valid Spotify link!", form.errors['url'])  # noqa
