@@ -1,7 +1,7 @@
 <h1 align=center>Portfolio Project 4</h1>
 
-<p align=center>Do you love music? Oldies? Pop music?..<br/>
-Well, here you have the opportunity to hear and rate some of your favourite tracks of all time covered,<br>
+<p align=center>Do you love music? Oldies? Pop music..?<br/>
+Well, here you have the opportunity to hear and rate some of your favourite tracks of all time, covered <br>
 (in some peoples opinion, ruined) <br>
 by the worlds most unpopular genre of music.. METAL!</p>
 <br>
@@ -20,29 +20,29 @@ by the worlds most unpopular genre of music.. METAL!</p>
 
 ### User Stories
 
-1. As a user, I would like to be able to …
+1. As a user, I would like to be able to:
 
-    1.1 Register on the website using my username, email address and password;
+    1.1 Register on the website using my username, email address and password
 
-    1.2 View all tracks added on the site;
+    1.2 View all tracks added on the site
 
-    1.3 View details about all added tracks.
+    1.3 View details about all added tracks
 
-    1.4 View tracklist on the navbar.  
+    1.4 View tracklist on the navbar  
 
-2. As a logged in user, I would like to be able to …
+2. As a logged in user, I would like to be able to:
 
-    2.1 Create a rating of my favourite tracks, including :
-    + Track title,
-    + Cover Artist,
-    + Original artist,
-    + Overall Rating,
+    2.1 Create a rating of my favourite tracks, including:
+    + Track title
+    + Cover Artist
+    + Original artist
+    + Overall Rating
 
-    2.2 Create a new track, if my track is not added to the Database;
+    2.2 Create a new track, if my track is not added to the Database
 
-    2.3 Check my track review after added;
+    2.3 Check my track review after added
 
-    2.4 Edit or delete my track ratings.
+    2.4 Edit or delete my track ratings
 #
 ### 1. Strategy
 
@@ -52,10 +52,10 @@ by the worlds most unpopular genre of music.. METAL!</p>
 
 ### 2. Scope
 
- * A simple, straightforward, intuitive UX experience;
- * An explicit content;
- * An easy navigation for the user through all of the features;
- * A site that is visually appealing on most devices.
+ * A simple, straightforward, intuitive UX experience
+ * An explicit content
+ * An easy navigation for the user through all of the features
+ * A site that is visually appealing on most devices
 
 ## Functional Scope 
 
@@ -73,20 +73,20 @@ by the worlds most unpopular genre of music.. METAL!</p>
 
 All functionality and development of this project were managed using **Trello** (https://trello.com/b/LcAoo35I/metal-re-injection-pp4)
 
-* Credentials to this tool will be provided during submission.
+* Credentials to this tool will be provided during submission
 
 ### 3. Structure
 
-* A clear and straightforward layout is in place to ensure users can navigate intuitively and have a leisurely experience.
-* Navbar is fixed on top to facilitate users to navigate through pages easily.
-* A Small dropdown menu navigation is the same on all pages at small screen sizes to ensure easy navigation.
-* Add, Edit/Update are straightforward forms to allow users to use the features without issues.
+* A clear and straightforward layout is in place to ensure users can navigate intuitively and have a leisurely experience
+* Navbar is fixed on top to facilitate users to navigate through pages easily
+* A Small dropdown menu navigation is the same on all pages at small screen sizes to ensure easy navigation
+* Add, Edit/Update are straightforward forms to allow users to use the features without issues
 
 
 ### 4. Skeleton
 
 * Wireframes created with Balsamiq. <br>
-* The project was developed from initial wireframes, and some modifications were made during the development process in response to user feedback.
+* The project was developed from initial wireframes, and some modifications were made during the development process in response to user feedback
 
 
 <details>
@@ -110,7 +110,7 @@ All functionality and development of this project were managed using **Trello** 
 
 * Colours
 
-- The colour scheme was chosen based on the background image I wanted to use sitewide.
+- The colour scheme was chosen based on the background image I wanted to use sitewide:
 I used [Coolors](https://coolors.co/) to generate a colour palette based on the image.
 <details>
 <summary>Click to see Colours:</summary>
@@ -122,7 +122,7 @@ I used [Coolors](https://coolors.co/) to generate a colour palette based on the 
 </details>
 
 
-* Font Selection
+**Font Selection**
  
 Two fonts were chosen with [Google Fonts](https://fonts.google.com/) to be used across the entire site.
 
@@ -132,41 +132,41 @@ The chosen fonts were Varela Round, Segoe UI with Roboto and Lato as back up fon
 
 ### **Navbar**
 
-+ Fixed Navbar allow the user easy access to all pages.
++ Fixed Navbar to allow the user easy access to all pages
 
-1. Tracklist, Login and Signup buttons on the navbar are the only buttons present if the user is `not` logged in.
+1. Tracklist, Login and Signup buttons on the navbar are the only buttons present if the user is `not` logged in
 
 <img width="700" src="static/assets/img/readme_img/features/loggedoutnavbar.png">
 
-2. Tracklist, Add a Track, My Tracks and Logout buttons are only present if the user has successfully logged in.
+2. Tracklist, Add a Track, My Tracks and Logout buttons are only present if the user has successfully logged in
 
 <img width="700" src="static/assets/img/readme_img/features/loggedinusernavbar.png">
 
 3. Track list is available to view to all users (logged in or not), however, the tracks cannot be played until<br>
-the user logs in, or signs up.
+the user logs in, or signs up
 
-4. Collapsed navbar on smaller devices to wrap in all options and assure better navbar design.
+4. Collapsed navbar on smaller devices to wrap in all options and assure better navbar design
 
   <img width="400" src="static/assets/img/readme_img/features/collapsed-navbar.png">
 
 ### **Track list page**
 
-1. On this page, users can view all user added tracks ordered by latest date/time added, including pagination.
+1. On this page, users can view all user added tracks ordered by latest date/time added, including pagination
 
   <img width="700" src="static/assets/img/readme_img/features/tracklistpage.png">
 
-* Each card contains Track title, Cover Artist, Original Artist, Author, Publication date and if the author owns the track, 
-two buttons, `Edit` `Delete`.
+* Each card contains Track title, Cover Artist, Original Artist, Author, Publication date and if the author owns the track,
+two buttons, `Edit` `Delete`
 
-* The entire card is a link to the Rate a track page.
+* The entire card is a link to the Rate a track page
 
 ### **Rate a Track page** 
 
-* Here the User has the ability to listen to the track and give it a rating out of 5 stars.
+* Here the User has the ability to listen to the track and give it a rating out of 5 stars
 
 <img width="700" src="static/assets/img/readme_img/features/rateatrackpage.png">
 
-  1.1 If the user is the author, the same `Edit` `Delete` buttons will be present.
+  1.1 If the user is the author, the same `Edit` `Delete` buttons will be present
 
 <img width="400" src="static/assets/img/readme_img/features/authoreditdelete.png">
 
@@ -176,56 +176,56 @@ two buttons, `Edit` `Delete`.
 
 ### **Track rating system**
 
-1. Underneath the single song on the `Rate a Track` page, the user has the option to rate the current track out of 5 stars.
+1. Underneath the single song on the `Rate a Track` page, the user has the option to rate the current track out of 5 stars
 
-    i. The user can rate any song while logged in.<br>
-    ii. The user can change their rating while logged in.<br>
-    iii. The number of total ratings and average ratings are shown and match the stars accordingly.
+    i. The user can rate any song while logged in<br>
+    ii. The user can change their rating while logged in<br>
+    iii. The number of total ratings and average ratings are shown and match the stars accordingly
 
 
   <img width="700"  src="static/assets/img/readme_img/features/ratings.png">
 
 ### **Update/Edit Track Page**
 
-1. On this page, a logged user can change the information made by them. All fields are prepopulated, allowing the user to see which information they would like to change.
-2. The `Go back` button will redirect the user to the Rate a Track page without any changes.
+1. On this page, a logged user can change the information made by them. All fields are prepopulated, allowing the user to see which information they would like to change
+2. The `Go back` button will redirect the user to the Rate a Track page without any changes
 
 <img width="700" src="static/assets/img/readme_img/features/editatrackpage.png">
 
 ### **Delete a Track Page**
 
-1. If the user clicks on delete a track, they will be redirected to Delete a Track page to confirm the deletion or cancel it.
-2. The `Go back` button will redirect the user to the Rate a Track page without any changes.
+1. If the user clicks on delete a track, they will be redirected to Delete a Track page to confirm the deletion or cancel it
+2. The `Go back` button will redirect the user to the Rate a Track page without any changes
 
 <img width="700" src="static/assets/img/readme_img/features/deleteatrackpage.png">
 
 ### **Custom 404 Page not found**
 
-* I have created a custom 404 error page to catch if the user inputs the wrong page number, or if a page or feature does not exist.
-* I have included a button to redirect back to home.
+* I have created a custom 404 error page to catch if the user inputs the wrong page number, or if a page or feature does not exist
+* I have included a button to redirect back to home
 
 <img width="700" src="static/assets/img/readme_img/testing_img/404error.png">
 
 ### **Custom 500 Internal server error**
 
-* I have created a custom 500 error page to redirect to if there are any issues with the database including a button to redirect back to home.
+* I have created a custom 500 error page to redirect to if there are any issues with the database including a button to redirect back to home
 
 <img width="700" src="static/assets/img/readme_img/testing_img/500error.png">
 
 ### **Custom 403 Forbidden page**
 
-* I have also created a custom 403 forbidden error page to redirect to if there are any instances where a user tries to access a secure area of the site (e.g admin), including a button to redirect back to home.
+* I have also created a custom 403 forbidden error page to redirect to if there are any instances where a user tries to access a secure area of the site (e.g admin), including a button to redirect back to home
 
 #
 ## Future Features
 
-I would like to ...
+I would like to...
 
-1. Add a search bar to find artists and or tracks.
-2. Add an infinite smooth scroll carousel to list all tracks on the same page.
-3. Create an option for the user to add a song from another source, i.e. Youtube, Deezer.
-4. Include a user profile page allowing users to edit, or delete their profile.
-5. Include a comments section to be used with the rating system.
+1. Add a search bar to find artists and or tracks
+2. Add an infinite smooth scroll carousel to list all tracks on the same page
+3. Create an option for the user to add a song from another source, i.e. Youtube, Deezer
+4. Include a user profile page allowing users to edit, or delete their profile
+5. Include a comments section to be used with the rating system
 
 #
 ## Languages Used
@@ -234,28 +234,28 @@ I would like to ...
 
 ## Frameworks, Libraries & Programs Used
 
-+ Balsamiq: Balsamiq was used to create the wireframes during the design process.
-+ Favicon Generator: Used to create favicon used on the website.
-+ Grammarly: Used to correct any spell mistakes on readme and app text.
-+ Git: Gitpod IDE was used for version control by utilizing the Gitpod terminal to commit and Push to GitHub.
-+ GitHub: GitHub respository is used to store the project's code after being pushed from Gitpod.
-+ Google Fonts: Google fonts are used to add fonts for aesthetic and UX purposes.
-+ Django: Framework used to add structure to the platform.
-+ Bootstrap5: Framework used to add structure and responsiveness.
-+ AmIResponsive: Used to generate mockup image.
++ Balsamiq: Balsamiq was used to create the wireframes during the design process
++ Favicon Generator: Used to create favicon used on the website
++ Grammarly: Used to correct any spelling mistakes on readme and app text
++ Git: Gitpod IDE was used for version control by utilizing the Gitpod terminal to commit and Push to GitHub
++ GitHub: GitHub respository is used to store the project's code after being pushed from Gitpod
++ Google Fonts: Google fonts are used to add fonts for aesthetic and UX purposes
++ Django: Framework used to add structure to the platform
++ Bootstrap5: Framework used to add structure and responsiveness
++ AmIResponsive: Used to generate mockup image
 
 ## Testing and Code validation
 
-All testing and code validation details are described in a separate file [TESTING.md](TESTING.md).
+All testing and code validation details are described in a separate file [TESTING.md](TESTING.md)
 
 ## Deployment
 
-Metal-Re-Injection is deployed using Heroku.
+Metal-Re-Injection is deployed using Heroku
 
 <details>
 <summary>Heroku Deployment steps: </summary>
 
- 1. Ensure all dependencies are listed within the requirements.txt file.
+ 1. Ensure all dependencies are listed within the requirements.txt file
 
  Within the terminal in Gitpod type `pip3 --local freeze > requirements.txt`, and a list with all requirements will be created to be read by Heroku.
 
@@ -286,7 +286,7 @@ Metal-Re-Injection is deployed using Heroku.
     
     <img width="700" src="static/assets/img/readme_img/heroku/herokupostgres.png">
     
-    2.7.1. Next, You would usually navigate to the `deploy` tab,
+    2.7.1. Next, You would usually navigate to the `deploy` tab;
       - Click on connect to Github
       - Search for the repository named Metal-Re-Injection
       - And connect heroku to Github.<br>
@@ -304,7 +304,7 @@ Metal-Re-Injection is deployed using Heroku.
     
     2.8. Navigate to the settings tab
     
-    2.9.  Click on Config Vars, and add Cloudinary, Database URL (from Heroku-Postgres) and Secret key.
+    2.9.  Click on Config Vars, and add Cloudinary, Database URL (from Heroku-Postgres) and Secret key
     <img width="700" src="static/assets/img/readme_img/heroku/configvarsheroku.png">
 
 </details>
@@ -316,20 +316,20 @@ Metal-Re-Injection is deployed using Heroku.
 
     - Log in to your own GitHub and locate the GitHub Repository you wish to fork
     - At the top of the Repository (not top of page), just above the "Settings" button on the menu, locate the "Fork" button.
-    - You should now have a copy of the original repository in your GitHub account.
+    - You should now have a copy of the original repository in your GitHub account
 
 * Making a Local Clone
 
     - Log in to your own GitHub and locate the GitHub Repository
-    - Under the repository name, click "Clone or download".
-    - To clone the repository using HTTPS, under "Clone with HTTPS", copy the link.
+    - Under the repository name, click "Clone or download"
+    - To clone the repository using HTTPS, under "Clone with HTTPS", copy the link
     - Open Git Bash
-    - Change the current working directory to the location where you want the cloned directory to be made.
-    - Type git clone, and then paste the URL you copied in Step 3.
+    - Change the current working directory to the location where you want the cloned directory to be made
+    - Type git clone, and then paste the URL you copied in Step 3
 
  $ git clone https://github.com/Chr15w1986/Metal-Re-injectionPP4
 
-Press Enter. Your local clone will be created.
+Press Enter. Your local clone will be created
 
 </details>
 
@@ -344,10 +344,10 @@ Press Enter. Your local clone will be created.
 
 - Code institute for the amazing Tutors on the course
 - My brilliant Mentor Ben Kavanagh, [BAK2K3](https://github.com/BAK2K3) for his patience, excellent advice on my code, pushing me back on track
-    when I start to lose faith, taking time out of his own day and duties to answer ALL of my questions with absolute perfection, and just generally being a Python god!
+    when I started to lose faith, taking time out of his own day and duties to answer ALL of my questions with absolute perfection, and just generally being a Python God!
 - Shellie Downie [ShellieD](https://github.com/shellieD), for her support.. two heads are always better than one!
-- Matt Boden [MattBCoding](https://github.com/MattBCoding), for being an absolute god at pointing out the obvious
+- Matt Boden [MattBCoding](https://github.com/MattBCoding), for being an absolute God at pointing out the obvious
 (and all round genius).
 - My family for their support, patience and testing!!
-- My wonderful fiancée for being my personal spell checker/grammer police and for listening to me when I need to rant!
+- My wonderful fiancée for being my personal spell checker/grammar police and for listening to me when I needed to rant!
 - Everybody on Slack for tips, advice, quick fixes and support

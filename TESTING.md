@@ -66,8 +66,8 @@ At the end of the development of this project (phase 1 - before submission day),
 
   There were 2 parts of the site that were inaccesible and due to this I was unable to check them with the tool. 
   * These were:
-    - Mytracks page, Internal server error. 
-    - Rate a track page, User must be signed in, WAVE wouldn't allow me to sign in.
+    - Mytracks page, Internal server error
+    - Rate a track page, User must be signed in, WAVE wouldn't allow me to sign in
     
 </details>
 
@@ -147,9 +147,9 @@ I do not consider these errors to have any impact on the functionality of the fi
   Google Chrome: All aspects of the site work perfectly fine. Pages load quickly, all features are working and found no problems with CRUD, listening to the tracks, logging in or out, signing up, adding tracks etc.
   Mozilla Firefox: All aspects of the site work perfectly fine. Pages load quickly, all features are working and found no problems with CRUD, listening to the tracks, logging in or out, signing up, adding tracks etc.
 
-  * Every button works and redirects to the next page quickly,<br>
-  * Url's load correctly on the rate a track page.<br>
-  * Sign up form sends an automated email from a gmail account to the user to verify the email address. This works as it should.
+  * Every button works and redirects to the next page quickly<br>
+  * Url's load correctly on the rate a track page<br>
+  * Sign up form sends an automated email from a gmail account to the user to verify the email address. This works as it should
   
 
 ### Mobile
