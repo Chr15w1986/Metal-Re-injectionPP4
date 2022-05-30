@@ -75,7 +75,6 @@ All functionality and development of this project were managed using **Trello** 
 
 * Credentials to this tool will be provided during submission.
 
-<!-- ADD SPRINTS HERE -->
 ### 3. Structure
 
 * A clear and straightforward layout is in place to ensure users can navigate intuitively and have a leisurely experience.
@@ -106,8 +105,6 @@ All functionality and development of this project were managed using **Trello** 
 [Login Page mobile](wireframes/loginpage-mobile.png) <br>
 
 </details>
-
-#
 
 ### 5. Surface
 
@@ -181,8 +178,8 @@ two buttons, `Edit` `Delete`.
 
 1. Underneath the single song on the `Rate a Track` page, the user has the option to rate the current track out of 5 stars.
 
-    i. The user can rate any song while logged in.
-    ii. The user can change their rating while logged in.
+    i. The user can rate any song while logged in.<br>
+    ii. The user can change their rating while logged in.<br>
     iii. The number of total ratings and average ratings are shown and match the stars accordingly.
 
 
@@ -190,7 +187,7 @@ two buttons, `Edit` `Delete`.
 
 ### **Update/Edit Track Page**
 
-1. On this page, a logged user can change the information made by them. All fields are already populated, allowing the user to see which information they would like to change.
+1. On this page, a logged user can change the information made by them. All fields are prepopulated, allowing the user to see which information they would like to change.
 2. The `Go back` button will redirect the user to the Rate a Track page without any changes.
 
 <img width="700" src="static/assets/img/readme_img/features/editatrackpage.png">
@@ -244,6 +241,7 @@ I would like to ...
 + GitHub: GitHub respository is used to store the project's code after being pushed from Gitpod.
 + Google Fonts: Google fonts are used to add fonts for aesthetic and UX purposes.
 + Django: Framework used to add structure to the platform.
++ Bootstrap5: Framework used to add structure and responsiveness.
 + AmIResponsive: Used to generate mockup image.
 
 ## Testing and Code validation
