@@ -11,7 +11,7 @@ sp = spotipy.Spotify(auth_manager=auth_manager)
 
 
 def test_and_rebuild_link(url_to_test):
-    """ Function for stripping down and rebuilding spoftify url """
+    """Function for stripping down and rebuilding Spotify URL"""
     try:
         track = sp.track(url_to_test)
         original_track_url = track['external_urls']['spotify']
